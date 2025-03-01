@@ -38,7 +38,9 @@ class _contadorState extends State<contador> {
             },
             child: Icon(Icons.plus_one),
           ),
-          SizedBox(height: 10),
+          SizedBox(
+            height: 20,
+          ), //el sizedbox se utilizo para que hay aun espacio entre los 2 botones
           FloatingActionButton(
             onPressed: () {
               if (clickcontador == 0) return;
