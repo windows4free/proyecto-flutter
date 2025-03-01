@@ -33,14 +33,12 @@ class _contadorState extends State<contador> {
         children: [
           FloatingActionButton(
             onPressed: () {
-              clickcontador++;
+              clickcontador = 0;
               setState(() {});
             },
-            child: Icon(Icons.plus_one),
+            child: Icon(Icons.refresh_rounded),
           ),
-          SizedBox(
-            height: 20,
-          ), //el sizedbox se utilizo para que hay aun espacio entre los 2 botones
+          SizedBox(height: 650),
           FloatingActionButton(
             onPressed: () {
               if (clickcontador == 0) return;
@@ -48,6 +46,16 @@ class _contadorState extends State<contador> {
               setState(() {});
             },
             child: Icon(Icons.exposure_minus_1),
+          ),
+          SizedBox(
+            height: 20,
+          ), //el sizedbox se utilizo para que hay aun espacio entre los 2 botones
+          FloatingActionButton(
+            onPressed: () {
+              clickcontador++;
+              setState(() {});
+            },
+            child: Icon(Icons.plus_one),
           ),
         ],
       ),
